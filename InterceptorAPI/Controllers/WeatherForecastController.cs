@@ -25,7 +25,9 @@ namespace InterceptorAPI.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            //Info: Debugger will go into hook but wouldn't execute anything as this method isnt marked with the custom attribute
             _student.SetName("MyName");
+            //Info: Debugger will go into hook and execute our code since the hook attribute was added here
             var firstCharacter = _student.GetFirstLetterOfName();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                 {

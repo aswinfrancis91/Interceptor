@@ -5,7 +5,7 @@ using InterceptorAPI.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container. The below three lines are added extra to get  hook working
+//Info: Add services to the container. The below three lines are added extra to get  hook working
 builder.Services.AddSingleton(new ProxyGenerator());
 builder.Services.AddScoped<IInterceptor, HookInterceptor>();
 builder.Services.AddProxiedScoped<IStudent, Student>();

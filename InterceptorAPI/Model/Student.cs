@@ -11,8 +11,9 @@ public interface IStudent
 public class Student : IStudent
 {
     public string Name { get; set; }
-
+    
     [Hook]
+    //Info: Our hook attribute is added here
     public char GetFirstLetterOfName()
     {
         return Name[0];

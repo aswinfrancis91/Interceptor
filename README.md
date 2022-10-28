@@ -19,4 +19,5 @@ http://www.castleproject.org/projects/dynamicproxy/
     builder.Services.AddProxiedScoped<IStudent, Student>();
 ```
 8. Now place debugger in the attribute, the interceptor and controller method to see how the code gets into custom code if hookattribute is found for a method in the student class and skipped when its not found. `SetName()` doesnt have the attribute but `GetFirstLetterOfName()` has.
+9. Search for 'Info:' to see comments related to hook specific code change
 

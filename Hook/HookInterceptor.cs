@@ -8,17 +8,17 @@ namespace Hook
     {
         public void Intercept(IInvocation invocation)
         {
-            //Look for existence of hook attribute
+            //Info: Look for existence of hook attribute
             var hookAttr = invocation.MethodInvocationTarget
                 .GetCustomAttributes(typeof(HookAttribute), false)
                 .FirstOrDefault() as HookAttribute;
 
             if (hookAttr != null)
             {
-                //Do something if hook attribute exists. Sort of a pre hook
+                //Info: Do something if hook attribute exists. Sort of a pre hook
             }
 
-            invocation.Proceed(); //Continue with the rest of the code. Can be in else condition if you want to completely skip the executing the original code block
+            invocation.Proceed(); //Info: Continue with the rest of the code. Can be in else condition if you want to completely skip the executing the original code block
         }
     }
 }
