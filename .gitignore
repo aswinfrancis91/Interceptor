@@ -1,6 +1,7 @@
-/InterceptorAPI/bin/
+
 /.idea/
 /ProxyAttributes/bin/
+/ProxyAttributes/obj/
 /InterceptorAPI/obj/
 /InterceptorAPI/bin/
 /Hook/obj/
